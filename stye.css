@@ -1,0 +1,243 @@
+body {
+        min-height: 100vh;
+       
+        background-color: #dca0a0;
+        background-size: 300% 300%;
+        margin: 0;
+        padding: 0;
+    
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+      
+      .top-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      background: rgb(222,0,75);
+  background: linear-gradient(90deg, rgb(198, 84, 43) 0%, rgb(209, 113, 28) 49%, rgb(153, 65, 11) 100%);
+      
+        height: 20px;
+        padding: 1em;
+      }
+      
+      .siis {
+        font-size: 25px;
+        letter-spacing: 4px;
+        font-family: "Lucida Console", "Courier New", monospace;
+        background: #ad5389;
+  background: linear-gradient(to right, #ffffff, #f8f7ff, #fdf5f5);
+        text-transform: uppercase;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      li a {
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(250, 245, 250);
+        text-decoration: none;
+        padding: 2.2rem 3rem;
+        font-size: 20px;
+      }
+   
+      .menu {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .menu > li {
+        margin: 0 1rem;
+        overflow: hidden;
+      }
+      
+      .menu-button-container {
+        display: none;
+        height: 100%;
+        width: 30px;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      #menu-toggle {
+        display: none;
+      }
+      
+      .menu-button,
+      .menu-button::before,
+      .menu-button::after {
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        height: 4px;
+        width: 30px;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 2px;
+      }
+      
+      .menu-button::before {
+        content: "";
+        margin-top: -8px;
+      }
+      
+      .menu-button::after {
+        content: "";
+        margin-top: 8px;
+      }
+      
+      #menu-toggle:checked + .menu-button-container .menu-button::before {
+        margin-top: 0px;
+        transform: rotate(405deg);
+      }
+      
+      #menu-toggle:checked + .menu-button-container .menu-button {
+        background: rgba(255, 255, 255, 0);
+      }
+      
+      #menu-toggle:checked + .menu-button-container .menu-button::after {
+        margin-top: 0px;
+        transform: rotate(-405deg);
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .menu-button-container {
+          display: flex;
+        }
+        .menu {
+          position: absolute;
+          top: 0;
+          margin-top: 50px;
+          left: 0;
+          flex-direction: column;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+        }
+        #menu-toggle ~ .menu li {
+          height: 0;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        #menu-toggle:checked ~ .menu li {
+          border: 1px solid #333;
+          height: 2.5em;
+          padding: 0.5em;
+          transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .menu > li {
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          padding: 0.5em 0;
+          width: 100%;
+          color: white;
+          background-color: #222;
+        }
+        .menu > li:not(:last-child) {
+          border-bottom: 1px solid #444;
+        }
+        li a {
+          margin: -1em 0em;
+        }
+    }
+    @media (max-width: 600px) {
+        body {
+          overflow-x: hidden;
+         
+        }
+        .contain{
+          flex-direction: column;
+        }
+     
+        .menu-button-container {
+          display: flex;
+        }
+        .menu {
+          position: absolute;
+          top: 0;
+          margin-top: 50px;
+          left: 0;
+          flex-direction: column;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+        }
+        #menu-toggle ~ .menu li {
+          height: 0;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        #menu-toggle:checked ~ .menu li {
+          border: 1px solid #333;
+          height: 2.5em;
+          padding: 0.5em;
+          transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .menu > li {
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          padding: 0.5em 0;
+          width: 100%;
+          color: white;
+          background-color: #222;
+        }
+        .menu > li:not(:last-child) {
+          border-bottom: 1px solid #444;
+        }
+        li a {
+          margin: -1em 0em;
+        }
+        
+        
+    }
+    .contain{
+      margin: 4em 0em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap:200px;
+    }
+    .chart{
+     padding:2rem;
+     border:1px solid #f49131;
+     border-radius:1rem;
+     background:#f2edec;
+     box-shadow: 0 0 16px rgba(0, 0, 0, 0);
+    }
+    .set{
+      display: flex;
+      justify-content: center;
+    }
+    table {
+      background-color: #D9E8D8;
+box-shadow: 0 0 5px #C1D9BF, 0 0 0 10px #f5f5f5eb;
+      border-collapse: collapse;
+      width: 90%;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+      color: #5e5959;
+    }
+    
+    tr:nth-child(even) {background-color: #f2f2f2;}
+    h4{
+    margin: 1em 0em;
+      padding: 1em 0em;
+      text-align: center;
+     color: white; 
+     font-family: "Times New Roman", Times, serif;
+     background: rgb(222,0,75);
+  background: linear-gradient(90deg, rgb(198, 84, 43) 0%, rgb(209, 113, 28) 49%, rgb(153, 65, 11) 100%);
+    }
+   
+    

@@ -1,0 +1,261 @@
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 6em 0em;
+}
+input[type=password], input[type=email]{   
+    margin: 15px 0 22px 0;
+    width: 100%;
+      padding: 10px 30px;
+       border-radius: 10px;
+   color: white;
+          font-size: 20px;
+       box-sizing: border-box;  
+       transition: 1s; 
+    }
+ 
+    .shiva{
+      background: #2e2e2e;
+      font-family: "Times New Roman", Times, serif;
+      color: white;
+        padding: 2em 2em;
+    }
+    body {
+        height: 100vh;
+        width: 100%;
+        background-color: #333333;
+        background-size: 300% 300%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+      
+      .top-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background: rgb(222, 0, 75);
+        background-color: #40414f;
+      
+        box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 1),
+          inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      
+        height: 20px;
+        padding: 1em;
+      }
+      
+      .siis {
+        font-size: 25px;
+        letter-spacing: 4px;
+        font-family: "Lucida Console", "Courier New", monospace;
+        background-image: linear-gradient(135deg, #09f1b8, #3aedc0, #65ebca, #8dedd2);
+        text-transform: uppercase;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      li a {
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(250, 245, 250);
+        text-decoration: none;
+        padding: 2.2rem 3rem;
+        font-size: 20px;
+      }
+   
+      .menu {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .menu > li {
+        margin: 0 1rem;
+        overflow: hidden;
+      }
+      
+      .menu-button-container {
+        display: none;
+        height: 100%;
+        width: 30px;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      #menu-toggle {
+        display: none;
+      }
+      
+      .menu-button,
+      .menu-button::before,
+      .menu-button::after {
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        height: 4px;
+        width: 30px;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 2px;
+      }
+      
+      .menu-button::before {
+        content: "";
+        margin-top: -8px;
+      }
+      
+      .menu-button::after {
+        content: "";
+        margin-top: 8px;
+      }
+      
+      #menu-toggle:checked + .menu-button-container .menu-button::before {
+        margin-top: 0px;
+        transform: rotate(405deg);
+      }
+      
+      #menu-toggle:checked + .menu-button-container .menu-button {
+        background: rgba(255, 255, 255, 0);
+      }
+      
+      #menu-toggle:checked + .menu-button-container .menu-button::after {
+        margin-top: 0px;
+        transform: rotate(-405deg);
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .menu-button-container {
+          display: flex;
+        }
+        .menu {
+          position: absolute;
+          top: 0;
+          margin-top: 50px;
+          left: 0;
+          flex-direction: column;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+        }
+        #menu-toggle ~ .menu li {
+          height: 0;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        #menu-toggle:checked ~ .menu li {
+          border: 1px solid #333;
+          height: 2.5em;
+          padding: 0.5em;
+          transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .menu > li {
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          padding: 0.5em 0;
+          width: 100%;
+          color: white;
+          background-color: #222;
+        }
+        .menu > li:not(:last-child) {
+          border-bottom: 1px solid #444;
+        }
+        li a {
+          margin: -1em 0em;
+        }
+    }
+    @media (max-width: 600px) {
+        body {
+          overflow-x: hidden;
+        }
+      
+        .menu-button-container {
+          display: flex;
+        }
+        .menu {
+          position: absolute;
+          top: 0;
+          margin-top: 50px;
+          left: 0;
+          flex-direction: column;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+        }
+        #menu-toggle ~ .menu li {
+          height: 0;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        #menu-toggle:checked ~ .menu li {
+          border: 1px solid #333;
+          height: 2.5em;
+          padding: 0.5em;
+          transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .menu > li {
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          padding: 0.5em 0;
+          width: 100%;
+          color: white;
+          background-color: #222;
+        }
+        .menu > li:not(:last-child) {
+          border-bottom: 1px solid #444;
+        }
+        li a {
+          margin: -1em 0em;
+        }
+    }
+    .red button{
+        margin: 2em 7em;
+        padding: 0.5em 3.5em;
+        font-size: 20px;
+      
+        --clr-font-main: hsla(0 0% 20% / 100);
+        --btn-bg-1: hsla(194 100% 69% / 1);
+        --btn-bg-2: hsla(217 100% 56% / 1);
+        --btn-bg-color: hsla(360 100% 100% / 1);
+        --radii: 0.5em;
+        cursor: pointer;
+       
+        font-size: var(--size, 1rem);
+        font-family: "Segoe UI", system-ui, sans-serif;
+      
+        transition: 0.8s;
+        background-size: 280% auto;
+        background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+        border: none;
+        border-radius: var(--radii);
+        color: var(--btn-bg-color);
+        box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+       
+        border: 0;
+        color: white;
+      
+  
+        
+      }
+      h2{
+        margin: 1em 0em;
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+      }
+      h4{
+        text-align: center;
+       color: white; 
+       font-family: "Times New Roman", Times, serif;
+       background-color: #40414f;
+      
+      }
+      
